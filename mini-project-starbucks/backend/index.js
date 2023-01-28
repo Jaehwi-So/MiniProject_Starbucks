@@ -1,7 +1,4 @@
 import express from 'express'
-import swaggerUi from 'swagger-ui-express';
-import swaggerJsDoc from 'swagger-jsdoc';
-import {swaggerOptions} from './swagger/config.js'
 import cors from 'cors'
 import mongoose from 'mongoose';
 import { Starbucks } from './models/starbucks.model.js';
@@ -19,9 +16,7 @@ app.use(cors({
 }))
 
 /* swagger setup */
-const swaggerSpec = swaggerJsDoc(swaggerOptions)
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 /* end of swagger setup */
 
