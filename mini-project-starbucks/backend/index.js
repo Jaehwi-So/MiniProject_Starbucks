@@ -6,7 +6,8 @@ import cors from 'cors'
 import mongoose from 'mongoose';
 import { Starbucks } from './models/starbucks.model.js';
 import { User } from './models/user.model.js';
-import { Token } from './models/token.mode.js';
+import { Token } from './models/token.model.js';
+import { router } from './routes/index.js'
 
 const app = express();
 
@@ -40,3 +41,5 @@ mongoose.connect('mongodb://localhost:27017/mydocker03'); //docker-composeë¡œ ì—
 app.listen(process.env.SERVER_PORT || 3001, () => {
     console.log(`Example app listening on port! ${3001}`);
 })
+
+app.use('/', router);
