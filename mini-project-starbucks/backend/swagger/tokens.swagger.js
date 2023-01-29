@@ -47,7 +47,7 @@
  *              application/json:
  *                  schema:
  *                      $ref: "#/definitions/ResponseModel"
-* @swagger
+ * @swagger
  *  paths:
  *    /tokens/phone:
  *      put:
