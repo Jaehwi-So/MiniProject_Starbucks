@@ -1,0 +1,19 @@
+version: "3.7"  #Docker-compose 버전, 2버전과 3버전은 차이가 큼
+services:
+  my-backend: 
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8000:3001
+    volumes:
+      - ./backend/:/miniproject-starbucks/ #개발 환경에서 도커 컨테이너와 로컬 컴퓨터의 소스코드 동기화할때 이런 방식으로 사용, 로컬경로:컨테이너안경로
+  my-database:
+    image: mongo:5
+#   build: 
+#     context: ./database
+#     dockerfile: Dockerfile
+    ports:
+      - 27017:27017
+    volumes:
+    - ./local-mongodb:/data/db

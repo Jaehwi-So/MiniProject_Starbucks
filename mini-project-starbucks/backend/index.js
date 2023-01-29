@@ -35,7 +35,7 @@ app.get('/stocks', async (req, res) => {
 
 
 //MongoDB connection
-mongoose.connect('mongodb://localhost:27017/mydocker03'); //docker-compose로 연결되어 있으므로 네임리졸루션사용가능
+mongoose.connect('mongodb://my-database:27017/mydocker03'); //docker-compose로 연결되어 있으므로 네임리졸루션사용가능
 
 
 app.listen(process.env.SERVER_PORT || 3001, () => {
