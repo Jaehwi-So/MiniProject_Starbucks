@@ -1,13 +1,13 @@
 import { User } from "../models/user.model.js";
-import { checkAuthToken, isUsefulEmail, scraping, insertUser, getUsersList } from "../services/user.service.js";
+import { checkAuthToken, isUsefulEmail, scraping, insertUser, getUsersList } from "../services/users.service.js";
 import { checkValidationEmail, getWelcomeTemplate, sendTemplateToEmail } from "../utils/email.js";
 
 export const signUpUser = async (req, res) => {
     try{
         const {name, email, personal, prefer, pwd, phone} = req.body;
         const og = await scraping(prefer);
-        const encPersonal = personal;
-        if(await checkAuthToken(phone) && await isUsefulEmail(email) && checkValidationEmail(email)){
+        if(await checkAuthToken(phone) && await isUsefulEmail(email) && checkValidationEmail(email) && personal.length == 14){
+            const encPersonal = personal.substring(0, 6) + '-*******';
             const user = new User({
                 name, email, personal: encPersonal, prefer, pwd, phone, og
             })

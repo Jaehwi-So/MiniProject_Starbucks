@@ -39,7 +39,7 @@ export const sendTokenSMS = async (phone, token) => {
         from: SENDER_PHONE,
         text: `인증문자가 발송됩니다. ${token}`
     })
-    console.log(`${phone}으로 ${token}을 전송합니다.` , result)
+    console.log(`${phone}으로 ${token}을 전송합니다.`);
     return true;
 }
 

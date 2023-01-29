@@ -1,4 +1,4 @@
-import { checkPhoneLength, checkVerifyToken, createToken, insertTokenDatabase, sendTokenSMS } from "../services/token.service.js";
+import { checkPhoneLength, checkVerifyToken, createToken, insertTokenDatabase, sendTokenSMS } from "../services/tokens.service.js";
 
 export const sendTokenToSMS = async (req, res) => {
     try{
@@ -10,8 +10,8 @@ export const sendTokenToSMS = async (req, res) => {
     
             await insertTokenDatabase(phoneNumber, newToken);
     
-            //await sendTokenSMS(phoneNumber, newToken)
-            res.status(500).send({
+            await sendTokenSMS(phoneNumber, newToken)
+            res.status(200).send({
                 success: true,
                 message: "핸드폰으로 인증 문자를 전송하였습니다.",
                 data: null

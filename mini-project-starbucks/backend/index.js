@@ -5,6 +5,9 @@ import { Starbucks } from './models/starbucks.model.js';
 import { User } from './models/user.model.js';
 import { Token } from './models/token.model.js';
 import { router } from './routes/index.js'
+import swaggerUi from 'swagger-ui-express';
+import swaggerJsDoc from 'swagger-jsdoc';
+import {swaggerOptions} from './swagger/config.js'
 
 const app = express();
 
@@ -16,7 +19,9 @@ app.use(cors({
 }))
 
 /* swagger setup */
+const swaggerSpec = swaggerJsDoc(swaggerOptions)
 
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 /* end of swagger setup */
 
