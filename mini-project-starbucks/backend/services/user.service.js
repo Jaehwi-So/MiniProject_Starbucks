@@ -57,3 +57,8 @@ export const insertUser = async (user) => {
     await user.save();
     return user._id;
 }
+
+export const getUsersList = async () => {
+    const user = await User.find();
+    return user;
+}

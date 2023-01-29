@@ -1,0 +1,11 @@
+{
+  "name": "crawller",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^6.9.0",
+    "puppeteer": "^19.6.2"
+  },
+  "type":"module"
+}

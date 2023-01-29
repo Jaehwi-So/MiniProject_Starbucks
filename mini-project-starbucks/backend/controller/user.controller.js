@@ -1,5 +1,5 @@
 import { User } from "../models/user.model.js";
-import { checkAuthToken, isUsefulEmail, scraping, insertUser } from "../services/user.service.js";
+import { checkAuthToken, isUsefulEmail, scraping, insertUser, getUsersList } from "../services/user.service.js";
 import { checkValidationEmail, getWelcomeTemplate, sendTemplateToEmail } from "../utils/email.js";
 
 export const signUpUser = async (req, res) => {
@@ -29,6 +29,26 @@ export const signUpUser = async (req, res) => {
         }
 
         
+    }
+    catch(e){
+        console.log(e);
+        res.status(500).send({
+            success: false,
+            message: "내부 서버 오류",
+            data: null
+        })
+    }    
+}
+
+
+export const getUsers = async (req, res) => {
+    try{
+        const data = await getUsersList();
+        res.status(200).send({
+            success: true,
+            message: "유저 목록을 불러왔습니다.",
+            data: data
+        })     
     }
     catch(e){
         console.log(e);
