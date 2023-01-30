@@ -122,10 +122,10 @@ https://dingco.notion.site/Mini-Project-6d34c7b510134d8288ce676c7c91fd86
 ----------------
 
 # Result
-<img src="/screenshot/1.png" width="760" height="400"></img>
-<img src="/screenshot/2.png" width="760" height="400"></img>
-<img src="/screenshot/3.png" width="760" height="400"></img>
-<img src="/screenshot/4.png" width="760" height="400"></img>
+<img src="/screenshot/1.png" width="760" height="600"></img>
+<img src="/screenshot/2.png" width="760" height="600"></img>
+<img src="/screenshot/3.png" width="760" height="600"></img>
+<img src="/screenshot/4.png" width="320" height="200"></img>
 <img src="/screenshot/5.png" width="760" height="400"></img>
 <img src="/screenshot/6.png" width="760" height="400"></img>
-<img src="/screenshot/7.png" width="760" height="400"></img>
+<img src="/screenshot/7.png" width="760" height="600"></img>
