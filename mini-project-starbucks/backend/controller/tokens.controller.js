@@ -10,7 +10,7 @@ export const sendTokenToSMS = async (req, res) => {
     
             await insertTokenDatabase(phoneNumber, newToken);
     
-            await sendTokenSMS(phoneNumber, newToken)
+            //await sendTokenSMS(phoneNumber, newToken)
             res.status(200).send({
                 success: true,
                 message: "핸드폰으로 인증 문자를 전송하였습니다.",
@@ -18,7 +18,7 @@ export const sendTokenToSMS = async (req, res) => {
             })
         }
         else{
-            res.status(500).send({
+            res.status(200).send({
                 success: false,
                 message: "휴대폰 번호 확인.",
                 data: null
@@ -44,14 +44,14 @@ export const varifyToken = async (req, res) => {
         const token = req.body.token
         const isValid = await checkVerifyToken(token, phoneNumber);
         if(isValid){
-            res.status(500).send({
+            res.status(200).send({
                 success: true,
                 message: "휴대폰 인증 성공",
                 data: null
             })
         }
         else{
-            res.status(500).send({
+            res.status(200).send({
                 success: false,
                 message: "휴대폰 인증 실패",
                 data: null

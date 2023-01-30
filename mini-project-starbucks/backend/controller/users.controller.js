@@ -21,7 +21,7 @@ export const signUpUser = async (req, res) => {
             })
         }
         else{
-            res.status(402).send({
+            res.status(422).send({
                 success: false,
                 message: "회원 가입 실패",
                 data: null

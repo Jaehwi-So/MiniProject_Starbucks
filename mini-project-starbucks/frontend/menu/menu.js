@@ -2,7 +2,15 @@
 const getCoffee = async () => {
   // 받은 데이터로 createMenuCard 함수를 이용해
   // 메뉴 카드를 만들어주세요.
-  createMenuCard()
+  await axios.get("http://localhost:8000/starbucks").then((res) => {
+    console.log(res);
+      if(res.data.success){
+        res.data.data.forEach(element => {
+          createMenuCard(element)
+        });
+      }
+  })
+  
 }
 
 const createMenuCard = (data) => {
@@ -28,7 +36,7 @@ const createMenuCard = (data) => {
   // 메뉴 _id
   const menuCardInfo = document.createElement('div')
   menuCardInfo.className = 'Menu_Card_Info'
-  menuCardInfo.textContent = data?._id || 'id'
+  menuCardInfo.textContent = ''
 
   // 합체
   const menuWrapper = document.querySelector('#Menu_Background')

@@ -2,6 +2,10 @@
 인프런 스타벅스 미니 프로젝트 과제   
 https://dingco.notion.site/Mini-Project-6d34c7b510134d8288ce676c7c91fd86
 
+- 휴대폰 SMS 인증
+- 가입 환영 이메일 템픞릿
+- 스타벅스 크롤링 데이터 사용
+
 ## 1-1) BACKEND 완성하기
 
 1. backend 폴더에 docker 기반의 express, mongodb 서버를 만들어 주세요.
@@ -108,9 +112,20 @@ https://dingco.notion.site/Mini-Project-6d34c7b510134d8288ce676c7c91fd86
     - [O]  스웨거에서 인증 완료 API를 테스트 했을 때 오류 없이 작동된다.
     - [O]  스웨거에서 커피 목록 조회 API를 테스트 했을 때 오류 없이 작동된다.
 - html 연동
-    - [ ]  회원 목록 페이지에는 DB에 저장된 회원이 보인다.
-    - [ ]  커피 목록 페이지에는 DB에 저장된 커피의 이름과 이미지(최소 30개)가 보인다.
-    - [ ]  핸드폰 인증 버튼을 누르면 토큰이 문자로 전송된다.
-    - [ ]  회원 가입 버튼을 누르면 DB에 회원 데이터가 추가된다.
+    - [O]  회원 목록 페이지에는 DB에 저장된 회원이 보인다.
+    - [O]  커피 목록 페이지에는 DB에 저장된 커피의 이름과 이미지(최소 30개)가 보인다.
+    - [O]  핸드폰 인증 버튼을 누르면 토큰이 문자로 전송된다.
+    - [O]  회원 가입 버튼을 누르면 DB에 회원 데이터가 추가된다.
 - [O]  스타벅스를 크롤링 할 때, 커피 이미지는 하드코딩하지 않고 반복문으로 긁어왔다.
 - [O]  env 파일 변수명이 1-1에 나와있는 예시와 같다.
+
+----------------
+
+# Result
+<img src="/screenshot/1.png" width="760" height="400"></img>
+<img src="/screenshot/2.png" width="760" height="400"></img>
+<img src="/screenshot/3.png" width="760" height="400"></img>
+<img src="/screenshot/4.png" width="760" height="400"></img>
+<img src="/screenshot/5.png" width="760" height="400"></img>
+<img src="/screenshot/6.png" width="760" height="400"></img>
+<img src="/screenshot/7.png" width="760" height="400"></img>
